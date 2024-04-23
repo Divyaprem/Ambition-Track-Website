@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Personal Growth - Goal Setting & Tracking</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <main class="container">
+    <section id="goal-form-container" class="left-section">
+      <h2>Add a New Goal</h2>
+      <form id="goal-form">
+        <label for="goal-type">Goal Type:</label>
+        <select id="goal-type" name="goal-type" required>
+          <option value="">Select Type</option>
+          <option value="short-term">Short-Term</option>
+          <option value="long-term">Long-Term</option>
+        </select>
+        <br>
+        <label for="goal-title">Goal Title:</label>
+        <input type="text" id="goal-title" name="goal-title" required>
+        <br>
+        <label for="goal-description">Description:</label>
+        <textarea id="goal-description" name="goal-description" required></textarea>
+        <br>
+        <label for="target-date">Target Date:</label>
+        <input type="date" id="target-date" name="target-date" required>
+        <br>
+        <button type="submit" class="add-goal-button">Add Goal</button>
+        <button type="button" id="show-goals" class="show-goals-button">Show Goals</button>
+        <span id="success-message"></span>
+      </form>
+
+      <section id="my-goals-container">
+        <h2>My Goals</h2>
+        <div id="goals-list"></div>
+        <button id="hide-goals" class="hide-goals-button">Hide Goals</button>
+      </section>
+    </section>
+
+    <section class="middle-section">
+      <h1>Ambition-Track</h1>
+      <br>
+      <p>Plan you future wisely today!</p>
+    </section>
+
+    <section id="budget-planner-container" class="right-section">
+      <h2>Add a new Expense</h2>
+      <form id="budget-planner-form">
+        <label for="expense-type">Expense Type:</label>
+        <select id="expense-type" name="expense-type" required>
+          <option value="">Select Type</option>
+          <option value="travel">Travel</option>
+          <option value="emi">EMI</option>
+          <option value="food">Food</option>
+          <option value="investment">Investment</option>
+          <option value="rental">Rental</option>
+        </select>
+        <br>
+        <label for="expense-title">Expense Title:</label>
+        <input type="text" id="expense-title" name="expense-title" required>
+        <br>
+        <label for="expense-amount">Amount:</label>
+        <input type="number" id="expense-amount" name="expense-amount" required>
+        <br>
+        <label for="expense-date">Date:</label>
+        <input type="date" id="expense-date" name="expense-date" required>
+        <br>
+        <button type="submit" class="add-expense-button">Add Expense</button>
+        <button type="button" id="show-expenses" class="show-goals-button">Show Expenses</button>
+      </form>
+
+      <section id="my-expenses-container">
+        <h2>My Expenses</h2>
+        <div id="expenses-list"></div>
+        <button id="hide-expenses" class="hide-goals-button">Hide Expenses</button>
+      </section>
+    </section>
+
+    <div id="budget-modal" class="modal">
+      <div class="modal-content">
+        <h2>Budget Planner</h2>
+        <div id="budget-list-modal"></div>
+        <button id="close-budget-modal" class="close-modal-button">Close</button>
+      </div>
+    </div>
+  </main>
+
+
+</body>
+</html>
